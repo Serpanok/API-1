@@ -93,7 +93,7 @@ class HostingAPI {
 	 * @param array $post
 	 * @return mixed
 	 */
-	private function apiCall(string $action, array $post) {
+	public function apiCall(string $action, array $post) {
 		// Отправляем запрос на сервер хостинг провайдера
 		$ch = curl_init('https://adm.tools/action/'.$action.'/');
 		curl_setopt_array($ch, [
